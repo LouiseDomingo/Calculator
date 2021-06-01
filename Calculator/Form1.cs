@@ -164,12 +164,44 @@ namespace Calculator
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-
+            if (programScreen.Text.Length > 1)
+            {
+                programScreen.Text = programScreen.Text.Remove(programScreen.Text.Length - 1);
+            }
+            else
+            {
+                programScreen.Text = "0";
+            }
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
             programScreen.Text = string.Empty;
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subtractBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void multiplyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void divideBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void equalBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

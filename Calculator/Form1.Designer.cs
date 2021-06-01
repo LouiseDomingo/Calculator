@@ -97,6 +97,7 @@ namespace Calculator
             this.equalBtn.TabIndex = 3;
             this.equalBtn.Text = "=";
             this.equalBtn.UseVisualStyleBackColor = false;
+            this.equalBtn.Click += new System.EventHandler(this.equalBtn_Click);
             // 
             // unoBtn
             // 
@@ -243,6 +244,7 @@ namespace Calculator
             this.addBtn.TabIndex = 21;
             this.addBtn.Text = "+";
             this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // subtractBtn
             // 
@@ -254,6 +256,7 @@ namespace Calculator
             this.subtractBtn.TabIndex = 22;
             this.subtractBtn.Text = "-";
             this.subtractBtn.UseVisualStyleBackColor = false;
+            this.subtractBtn.Click += new System.EventHandler(this.subtractBtn_Click);
             // 
             // multiplyBtn
             // 
@@ -265,6 +268,7 @@ namespace Calculator
             this.multiplyBtn.TabIndex = 23;
             this.multiplyBtn.Text = "×";
             this.multiplyBtn.UseVisualStyleBackColor = false;
+            this.multiplyBtn.Click += new System.EventHandler(this.multiplyBtn_Click);
             // 
             // divideBtn
             // 
@@ -276,6 +280,7 @@ namespace Calculator
             this.divideBtn.TabIndex = 24;
             this.divideBtn.Text = "÷";
             this.divideBtn.UseVisualStyleBackColor = false;
+            this.divideBtn.Click += new System.EventHandler(this.divideBtn_Click);
             // 
             // programScreen
             // 
