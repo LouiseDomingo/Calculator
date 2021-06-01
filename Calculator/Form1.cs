@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
+        Double firstInput;
+        String operation;
+
         public Calculator()
         {
             InitializeComponent();
@@ -79,7 +82,7 @@ namespace Calculator
             else
             {
                 programScreen.Text = programScreen.Text + "4";
-            };
+            }
         }
 
         private void singkoBtn_Click(object sender, EventArgs e)
@@ -176,12 +179,14 @@ namespace Calculator
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            programScreen.Text = string.Empty;
+            programScreen.Text = "0";
         }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-
+            firstInput = Convert.ToDouble(programScreen.Text);
+            programScreen.Text = "0";
+            operation = "+";
         }
 
         private void subtractBtn_Click(object sender, EventArgs e)
@@ -201,6 +206,16 @@ namespace Calculator
 
         private void equalBtn_Click(object sender, EventArgs e)
         {
+            Double secondInput;
+            Double Result;
+
+            secondInput = Convert.ToDouble(programScreen.Text);
+
+            if (operation == "+")
+            {
+                Result = firstInput + secondInput;
+                programScreen.Text = Result.ToString();
+            }
 
         }
     }
