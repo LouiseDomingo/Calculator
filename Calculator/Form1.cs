@@ -200,7 +200,9 @@ namespace Calculator
 
         private void multiplyBtn_Click(object sender, EventArgs e)
         {
-
+            firstInput = Convert.ToDouble(programScreen.Text);
+            programScreen.Text = "0";
+            operation = "*";
         }
 
         private void divideBtn_Click(object sender, EventArgs e)
@@ -221,6 +223,12 @@ namespace Calculator
             if (operation == "-")
             {
                 Result = firstInput - secondInput;
+                programScreen.Text = Result.ToString();
+            }
+
+            if (operation == "*")
+            {
+                Result = firstInput * secondInput;
                 programScreen.Text = Result.ToString();
             }
 
