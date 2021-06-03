@@ -207,7 +207,9 @@ namespace Calculator
 
         private void divideBtn_Click(object sender, EventArgs e)
         {
-
+            firstInput = Convert.ToDouble(programScreen.Text);
+            programScreen.Text = "0";
+            operation = "/";
         }
 
         private void equalBtn_Click(object sender, EventArgs e)
@@ -230,6 +232,20 @@ namespace Calculator
             {
                 Result = firstInput * secondInput;
                 programScreen.Text = Result.ToString();
+            }
+
+            if (operation == "/")
+            {
+                if (secondInput != 0)
+                {
+                    Result = firstInput / secondInput;
+                    programScreen.Text = Result.ToString();
+                }
+
+                else
+                {
+                    programScreen.Text = "Undefined";
+                }
             }
 
         }
