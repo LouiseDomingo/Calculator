@@ -16,6 +16,8 @@ namespace Calculator
         Double secondInput;
         String operation;
         Double Result;
+        Double negativeValue;
+        Double percentValue;
 
         public Calculator()
         {
@@ -154,17 +156,26 @@ namespace Calculator
 
         private void decimalBtn_Click(object sender, EventArgs e)
         {
-            programScreen.Text = programScreen.Text + ".";
+            if (programScreen.Text.Contains("."))
+            {
+
+            }
+            else
+            {
+                programScreen.Text = programScreen.Text + ".";
+            }
         }
 
         private void posNegBtn_Click(object sender, EventArgs e)
         {
-
+            negativeValue = Convert.ToDouble(programScreen.Text) * -1;
+            programScreen.Text = negativeValue.ToString();
         }
 
         private void percentBtn_Click(object sender, EventArgs e)
         {
-
+            percentValue = Convert.ToDouble(programScreen.Text) / 100;
+            programScreen.Text = percentValue.ToString();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -186,6 +197,7 @@ namespace Calculator
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            equalBtn.Enabled = true;
             firstInput = Convert.ToDouble(programScreen.Text);
             programScreen.Text = "0";
             operation = "+";
@@ -193,6 +205,7 @@ namespace Calculator
 
         private void subtractBtn_Click(object sender, EventArgs e)
         {
+            equalBtn.Enabled = true;
             firstInput = Convert.ToDouble(programScreen.Text);
             programScreen.Text = "0";
             operation = "-";
@@ -200,6 +213,7 @@ namespace Calculator
 
         private void multiplyBtn_Click(object sender, EventArgs e)
         {
+            equalBtn.Enabled = true;
             firstInput = Convert.ToDouble(programScreen.Text);
             programScreen.Text = "0";
             operation = "*";
@@ -207,6 +221,7 @@ namespace Calculator
 
         private void divideBtn_Click(object sender, EventArgs e)
         {
+            equalBtn.Enabled = true;
             firstInput = Convert.ToDouble(programScreen.Text);
             programScreen.Text = "0";
             operation = "/";
@@ -220,18 +235,21 @@ namespace Calculator
             {
                 Result = firstInput + secondInput;
                 programScreen.Text = Result.ToString();
+                equalBtn.Enabled = false;
             }
 
             if (operation == "-")
             {
                 Result = firstInput - secondInput;
                 programScreen.Text = Result.ToString();
+                equalBtn.Enabled = false;
             }
 
             if (operation == "*")
             {
                 Result = firstInput * secondInput;
                 programScreen.Text = Result.ToString();
+                equalBtn.Enabled = false;
             }
 
             if (operation == "/")
@@ -240,13 +258,16 @@ namespace Calculator
                 {
                     Result = firstInput / secondInput;
                     programScreen.Text = Result.ToString();
+                    equalBtn.Enabled = false;
                 }
-
                 else
                 {
                     programScreen.Text = "Undefined";
+                    equalBtn.Enabled = false;
                 }
             }
+
+
 
         }
     }
