@@ -327,6 +327,7 @@ namespace Calculator
             this.Controls.Add(this.posNegBtn);
             this.Name = "Calculator";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
