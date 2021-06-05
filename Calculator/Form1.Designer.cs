@@ -285,10 +285,12 @@ namespace Calculator
             // programScreen
             // 
             this.programScreen.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.programScreen.Enabled = false;
             this.programScreen.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.programScreen.Location = new System.Drawing.Point(12, 12);
             this.programScreen.Multiline = true;
             this.programScreen.Name = "programScreen";
+            this.programScreen.ReadOnly = true;
             this.programScreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.programScreen.Size = new System.Drawing.Size(258, 79);
             this.programScreen.TabIndex = 26;
