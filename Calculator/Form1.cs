@@ -26,11 +26,7 @@ namespace Calculator
 
         private void zeroBtn_Click(object sender, EventArgs e)
         {
-            if (programScreen.Text == "0")
-            {
-                
-            }
-            else
+            if (programScreen.Text != "0")
             {
                 programScreen.Text = programScreen.Text + "0";
             }
@@ -157,7 +153,6 @@ namespace Calculator
         {
             if (programScreen.Text.Contains("."))
             {
-
             }
             else
             {
