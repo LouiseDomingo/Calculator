@@ -192,6 +192,7 @@ namespace Calculator
         private void clearBtn_Click(object sender, EventArgs e)
         {
             programScreen.Text = "0";
+            enablingButtons();
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -265,55 +266,51 @@ namespace Calculator
                     equalBtn.Enabled = false;
                 }
             }
+        }
+        private void disablingButtons()
+        {
+            zeroBtn.Enabled = false;
+            unoBtn.Enabled = false;
+            dosBtn.Enabled = false;
+            tresBtn.Enabled = false;
+            kwatroBtn.Enabled = false;
+            singkoBtn.Enabled = false;
+            saisBtn.Enabled = false;
+            siyeteBtn.Enabled = false;
+            otchoBtn.Enabled = false;
+            nuwebeBtn.Enabled = false;
+            posNegBtn.Enabled = false;
+            decimalBtn.Enabled = false;
+            percentBtn.Enabled = false;
+            deleteBtn.Enabled = false;
+            addBtn.Enabled = false;
+            subtractBtn.Enabled = false;
+            multiplyBtn.Enabled = false;
+            divideBtn.Enabled = false;
+            equalBtn.Enabled = false;
+        }
 
-            private void disablingButtons()
-            {
-                zeroBtn.Enabled = false;
-                unoBtn.Enabled = false;
-                dosBtn.Enabled = false;
-                tresBtn.Enabled = false;
-                kwatroBtn.Enabled = false;
-                singkoBtn.Enabled = false;
-                saisBtn.Enabled = false;
-                siyeteBtn.Enabled = false;
-                otchoBtn.Enabled = false;
-                nuwebeBtn.Enabled = false;
-                posNegBtn.Enabled = false;
-                decimalBtn.Enabled = false;
-                percentBtn.Enabled = false;
-                deleteBtn.Enabled = false;
-                add.Enabled = false;
-                subtractBtn.Enabled = false;
-                multiplyBtn.Enabled = false;
-                divideBtn.Enabled = false;
-                equalBtn.Enabled = false;
-            }
-
-            private void enablingButtons()
-            {
-                zeroBtn.Enabled = true;
-                unoBtn.Enabled = true;
-                dosBtn.Enabled = true;
-                tresBtn.Enabled = true;
-                kwatroBtn.Enabled = true;
-                singkoBtn.Enabled = true;
-                saisBtn.Enabled = true;
-                siyeteBtn.Enabled = true;
-                otchoBtn.Enabled = true;
-                nuwebeBtn.Enabled = true;
-                posNegBtn.Enabled = true;
-                decimalBtn.Enabled = true;
-                percentBtn.Enabled = true;
-                deleteBtn.Enabled = true;
-                add.Enabled = true;
-                subtractBtn.Enabled = true;
-                multiplyBtn.Enabled = true;
-                divideBtn.Enabled = true;
-                equalBtn.Enabled = true;
-            }
-
-
-
+        private void enablingButtons()
+        {
+            zeroBtn.Enabled = true;
+            unoBtn.Enabled = true;
+            dosBtn.Enabled = true;
+            tresBtn.Enabled = true;
+            kwatroBtn.Enabled = true;
+            singkoBtn.Enabled = true;
+            saisBtn.Enabled = true;
+            siyeteBtn.Enabled = true;
+            otchoBtn.Enabled = true;
+            nuwebeBtn.Enabled = true;
+            posNegBtn.Enabled = true;
+            decimalBtn.Enabled = true;
+            percentBtn.Enabled = true;
+            deleteBtn.Enabled = true;
+            addBtn.Enabled = true;
+            subtractBtn.Enabled = true;
+            multiplyBtn.Enabled = true;
+            divideBtn.Enabled = true;
+            equalBtn.Enabled = true;
         }
     }
 }
