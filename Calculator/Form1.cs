@@ -263,7 +263,7 @@ namespace Calculator
                 else
                 {
                     programScreen.Text = "Undefined";
-                    equalBtn.Enabled = false;
+                    disablingButtons();
                 }
             }
         }
