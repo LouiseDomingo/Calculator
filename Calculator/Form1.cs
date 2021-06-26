@@ -28,8 +28,7 @@ namespace Calculator
         {
             if (programScreen.Text == "0")
             {
-                programScreen.Text = string.Empty;
-                programScreen.Text = programScreen.Text + "0";
+                
             }
             else
             {
