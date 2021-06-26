@@ -266,6 +266,29 @@ namespace Calculator
                 }
             }
 
+            private void disablingButtons()
+            {
+                zeroBtn.Enabled = false;
+                unoBtn.Enabled = false;
+                dosBtn.Enabled = false;
+                tresBtn.Enabled = false;
+                kwatroBtn.Enabled = false;
+                singkoBtn.Enabled = false;
+                saisBtn.Enabled = false;
+                siyeteBtn.Enabled = false;
+                otchoBtn.Enabled = false;
+                nuwebeBtn.Enabled = false;
+                posNegBtn.Enabled = false;
+                decimalBtn.Enabled = false;
+                percentBtn.Enabled = false;
+                deleteBtn.Enabled = false;
+                add.Enabled = false;
+                subtractBtn.Enabled = false;
+                multiplyBtn.Enabled = false;
+                divideBtn.Enabled = false;
+                equalBtn.Enabled = false;
+            }
+
 
 
         }
